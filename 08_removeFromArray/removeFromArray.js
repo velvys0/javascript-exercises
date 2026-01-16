@@ -1,18 +1,8 @@
-const removeFromArray = function(array, ...args) {
+const removeFromArray = function(arr, ...toDel) {
 
-
-
-for (let arg of args) {
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] == arg && typeof(array[i]) == typeof(arg)) {
-            array.splice(i, 1);
-            i--;
-        }
-    }
-}
-
-console.log(array);
-return array;
+for (i = 0; i < toDel.length; i++) {
+        arr = arr.filter((x) => x !== toDel[i])
+}    return arr
 };
 
 // Do not edit below this line
