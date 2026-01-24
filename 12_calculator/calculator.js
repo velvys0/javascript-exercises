@@ -10,12 +10,16 @@ const sum = function(arr) {
 	return arr.reduce(((a,b) => a + b), 0)
 };
 
-const multiply = function() {
-
+const multiply = function(arr) {
+  return arr.reduce(((a,b) => a * b), 1)
 };
 
-const power = function() {
-	
+const power = function(a,b) {
+  let result = 1
+  for (i = 0; i < b; i++) {
+    result = result * a
+  }
+  return result
 };
 
 const factorial = function() {
