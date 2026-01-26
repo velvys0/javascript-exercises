@@ -1,9 +1,8 @@
 const palindromes = function (input) {
-    const forward = []
+    let forward = []
     let backward = []
 
     for (letter in input) {
-        console.log(input[letter])
         if (input[letter] === '!' || 
             input[letter] === ' ' ||
             input[letter] === ',' ||
@@ -12,10 +11,10 @@ const palindromes = function (input) {
             continue
         }
         forward.push(input[letter])
-        console.log(forward)
     }
-    backward = [...forward].reverse()
-    return forward.join() === backward.join()
+    backward = [...forward].reverse().join('').toLowerCase()
+    forward = forward.join('').toLowerCase()
+    return forward === backward
 };
 
 // Do not edit below this line
